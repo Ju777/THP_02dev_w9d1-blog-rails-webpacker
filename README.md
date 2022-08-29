@@ -5,4 +5,4 @@
 ### How to use this repo ?
 - Clone this repo in your local computer 
 - Launch 'bundle install' + enter.
-- Launch 'rails' + enter, then open http://localhost:3000 with your internet browser.
+- Launch 'rails s' + enter, then open http://localhost:3000 with your internet browser.

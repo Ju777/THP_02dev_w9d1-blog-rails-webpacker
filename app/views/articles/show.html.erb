@@ -6,9 +6,9 @@
   
   <%= link_to "Back to articles", articles_path %>
 
-<% if @article.user === current_user %>
-  <p><%= link_to "Edit this article", edit_article_path(@article) %></p>
-  <p><%= button_to "Destroy this article", @article, method: :delete %></p>
-<% end %>
+  <% if @article.user === current_user %>
+    <p><%= link_to "Edit this article", edit_article_path(@article) %></p>
+    <p><%= button_to "Destroy this article", @article, method: :delete %></p>
+  <% end %>
 
 </div>

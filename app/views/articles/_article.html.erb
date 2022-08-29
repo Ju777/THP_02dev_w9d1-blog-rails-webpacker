@@ -3,17 +3,35 @@
   <p>
     <strong>Title:</strong>
     <%= article.title %>
+    <% if article.user === current_user %>
+      <small><strong>[MINE]</strong></small>
+    <% end %>
   </p>
 
-  <p>
-    <strong>Content:</strong>
-    <%= article.content %>
-  </p>
+  <% if article.private && (article.user != current_user) %>
+    <p>Private article ¯\_(ツ)_/¯ !</p>
+  <% else %>
 
-   <p>
-    <strong>Author:</strong>
-    <%= article.user.email %>
-  </p>
+    <p>
+      <strong>Updated at:</strong>
+      <%= article.updated_at %>
+    </p>
+
+    <p>
+      <strong>Content:</strong>
+      <%= article.content %>
+    </p>
+
+    <p>
+      <strong>Author:</strong>
+      <%= article.user.email %>
+    </p>
+
+    <p>
+      <strong>Private:</strong>
+      <%= article.private %> 
+    </p>
+  <% end %>
 
 </div>
 
