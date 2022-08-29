@@ -1,6 +1,10 @@
 <h1>Editing article</h1>
 
-<%= render "form", article: @article %>
+<% if @article.user === current_user  %>
+  <%= render "form", article: @article %>
+<% else %>
+  <p>Only author is allowed</p>
+<% end %>
 
 <br>
 

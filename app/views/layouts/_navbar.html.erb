@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <%= link_to 'HOME', root_path %>
+    </div>
+  
+    <% if current_user %>
+        <div>
+        <small><%=current_user.email%></small>
+        <%= button_to(
+        "Log Out",
+        destroy_user_session_path,
+        method: :delete
+        ) %>     
+    </div>
+
+    <% else %>
+        
+        <div>
+            <%= link_to 'SIGN UP', new_user_registration_path %>
+        </div>
+        <div>
+            <%= link_to 'LOGIN', user_session_path %>
+        </div>
+    <% end %>
+    
+</div>
