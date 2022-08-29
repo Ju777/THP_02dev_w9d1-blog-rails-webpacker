@@ -33,5 +33,17 @@
     </p>
   <% end %>
 
+  <p>
+    <strong>Comments:</strong>
+    <%= link_to "New comment", new_comment_path %>
+    <ul>
+      <% article.comments.each do |comment| %>
+        <li>
+          <%= comment.content %> <small><strong>[by <%= comment.user.email %>]</strong></small> 
+        </li>
+      <% end %>
+    </ul>
+  </p>
+
 </div>
 

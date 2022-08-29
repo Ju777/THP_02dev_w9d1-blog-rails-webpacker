@@ -7,6 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'faker'
+Comment.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('comments')
+
 Article.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('articles')
 
@@ -18,6 +21,10 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
     User.create(email: Faker::Internet.email, password:"123456")
 end
 
-30.times do
+10.times do
     Article.create(title: Faker::DcComics.title, content: Faker::Quote.yoda, user: User.find(rand(1..5)))
+end
+
+25.times do
+    Comment.create(content: Faker::Quote.yoda, user: User.find(rand(1..5)), article: Article.find(rand(1..10)))
 end
