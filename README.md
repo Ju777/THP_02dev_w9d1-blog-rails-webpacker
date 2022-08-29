@@ -1,24 +1,8 @@
-# README
+# Create a simple CRUD in Rails, using Webpakcer.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The today exercice's aim is to refresh our memory with Rails : create a simple blog (a CRUD) using Webpacker. The final AIM of the week is to know how to create a ackend with Rails and a frontend with React.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### How to use this repo ?
+- Clone this repo in your local computer 
+- Launch 'bundle install' + enter.
+- Launch 'rails' + enter, then open http://localhost:3000 with your internet browser.
